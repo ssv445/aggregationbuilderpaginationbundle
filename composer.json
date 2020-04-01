@@ -1,7 +1,7 @@
 {
   "name": "ludo444/aggregation-builder-pagination-bundle",
   "type": "symfony-bundle",
-  "description": "Paginate Doctrine MongoDB ODM AggregationBuilder with KnpPaginationBundle",
+  "description": "Paginate Doctrine MongoDB ODM AggregationBuilder with KnpPaginatorBundle",
   "keywords": ["pager", "paginator", "pagination", "symfony", "bundle", "mongodb", "aggregation"],
   "license": "MIT",
   "authors": [
