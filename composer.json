@@ -1,0 +1,32 @@
+{
+  "name": "ludo444/aggregation-builder-pagination-bundle",
+  "type": "symfony-bundle",
+  "description": "Paginate Doctrine MongoDB ODM AggregationBuilder with KnpPaginationBundle",
+  "keywords": ["pager", "paginator", "pagination", "symfony", "bundle", "mongodb", "aggregation"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Marek Hrušovský",
+      "email": "ludo444@gmx.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3",
+    "knplabs/knp-paginator-bundle": "^4.0",
+    "doctrine/mongodb-odm-bundle": "^4.0",
+    "ext-mongodb": "^1.5"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.16",
+    "phpmd/phpmd": "^2.8",
+    "phpstan/phpstan": "^0.12.18"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ludo\\Bundle\\AggregationBuilderPaginationBundle\\": ""
+    }
+  },
+  "config": {
+    "sort-packages": true
+  }
+}

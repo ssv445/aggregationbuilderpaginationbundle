@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="ludo_aggregation_builder_pagination.subscriber.aggregation_builder_pagination_subscriber" class="Ludo\Bundle\AggregationBuilderPaginationBundle\Subscriber\AggregationBuilderPaginationSubscriber">
+            <argument type="service" id="doctrine_mongodb.odm.document_manager" />
+            <tag name="knp_paginator.subscriber" />
+        </service>
+    </services>
+</container>

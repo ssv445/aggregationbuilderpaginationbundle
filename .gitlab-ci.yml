@@ -1,0 +1,17 @@
+image: php:7.4
+
+cache:
+  paths:
+    - vendor/
+
+before_script:
+  - apt-get update -yqq
+  - apt-get install -yqq git libzip-dev unzip
+  - docker-php-ext-install zip
+  - curl -sS https://getcomposer.org/installer | php
+  - php composer.phar install --ignore-platform-reqs
+
+test:
+  script:
+    - vendor/bin/phpstan analyse .
+    - vendor/bin/phpmd . text phpmd.xml --exclude vendor
