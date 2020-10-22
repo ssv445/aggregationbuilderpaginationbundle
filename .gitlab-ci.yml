@@ -3,6 +3,7 @@ image: php:7.4
 cache:
   paths:
     - vendor/
+    - composer.lock
 
 before_script:
   - apt-get update -yqq
@@ -11,7 +12,38 @@ before_script:
   - curl -sS https://getcomposer.org/installer | php
   - php composer.phar install --ignore-platform-reqs
 
-test:
+phpstan:
+  allow_failure: false
   script:
-    - vendor/bin/phpstan analyse .
-    - vendor/bin/phpmd . text phpmd.xml --exclude vendor
+    - vendor/bin/phpstan analyse . --error-format=junit --no-interaction > phpstan-report.xml
+  artifacts:
+    when: always
+    expose_as: phpstan-report
+    paths:
+      - phpstan-report.xml
+    reports:
+      junit: phpstan-report.xml
+
+phpmd:
+  allow_failure: false
+  script:
+    - vendor/bin/phpmd . xml phpmd.xml --exclude vendor > phpmd-report.xml
+  artifacts:
+    when: always
+    expose_as: phpmd-report
+    paths:
+      - phpmd-report.xml
+    reports:
+      junit: phpmd-report.xml
+
+phpcsfixer:
+  allow_failure: false
+  script:
+    - vendor/bin/php-cs-fixer fix -v --format junit --dry-run > phpcsfixer-report.xml
+  artifacts:
+    when: always
+    expose_as: phpcsfixer-report
+    paths:
+      - phpcsfixer-report.xml
+    reports:
+      junit: phpcsfixer-report.xml

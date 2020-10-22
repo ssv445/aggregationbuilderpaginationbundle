@@ -1,7 +1,8 @@
 <?php
-// see https://github.com/FriendsOfPHP/PHP-CS-Fixer
 
-$finder = PhpCsFixer\Finder::create()->in([__DIR__]);
+$finder = PhpCsFixer\Finder::create()
+    ->exclude('vendor')
+    ->in([__DIR__]);
 
 return PhpCsFixer\Config::create()
     ->setRiskyAllowed(true)
@@ -9,5 +10,6 @@ return PhpCsFixer\Config::create()
         '@Symfony' => true,
         '@Symfony:risky' => true,
         'declare_strict_types' => true,
+        'blank_line_after_opening_tag' => false,
     ])
     ->setFinder($finder);

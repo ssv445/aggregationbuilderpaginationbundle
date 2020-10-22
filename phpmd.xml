@@ -14,15 +14,21 @@
     <rule ref="rulesets/controversial.xml" />
     <rule ref="rulesets/design.xml" />
     <rule ref="rulesets/naming.xml">
-        <exclude name="ShortVariable"/>
+        <exclude name="ShortVariable" />
+        <exclude name="LongClassName" />
     </rule>
     <rule ref="rulesets/unusedcode.xml">
-        <exclude name="UnusedFormalParameter"/>
+        <exclude name="UnusedFormalParameter" />
     </rule>
 
     <rule ref="rulesets/naming.xml/ShortVariable">
         <properties>
-            <property name="minimum" description="The variable length reporting threshold" value="2"/>
+            <property name="minimum" description="The variable length reporting threshold" value="2" />
+        </properties>
+    </rule>
+    <rule ref="rulesets/naming.xml/LongClassName">
+        <properties>
+            <property name="maximum" description="The class name length reporting threshold" value="50" />
         </properties>
     </rule>
 </ruleset>
