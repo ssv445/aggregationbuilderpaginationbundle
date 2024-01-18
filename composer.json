@@ -11,7 +11,7 @@
     }
   ],
   "require": {
-    "php": "^7.3",
+    "php": "^8",
     "knplabs/knp-paginator-bundle": "^4.0",
     "doctrine/mongodb-odm-bundle": "^4.0",
     "ext-mongodb": "^1.5"
