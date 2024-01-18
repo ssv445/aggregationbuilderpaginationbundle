@@ -2,19 +2,27 @@
   "name": "ssv445/aggregation-builder-pagination-bundle",
   "type": "symfony-bundle",
   "description": "Paginate Doctrine MongoDB ODM AggregationBuilder with KnpPaginatorBundle",
-  "keywords": ["pager", "paginator", "pagination", "symfony", "bundle", "mongodb", "aggregation"],
+  "keywords": [
+    "pager",
+    "paginator",
+    "pagination",
+    "symfony",
+    "bundle",
+    "mongodb",
+    "aggregation"
+  ],
   "license": "MIT",
   "authors": [
     {
-      "name": "Marek Hrušovský",
-      "email": "ludo444@gmx.com"
+      "name": "Shyam",
+      "email": "shyam@readybytes.in"
     }
   ],
   "require": {
-    "php": "^8",
-    "knplabs/knp-paginator-bundle": "^4.0",
-    "doctrine/mongodb-odm-bundle": "^4.0",
-    "ext-mongodb": "^1.5"
+    "php": "^8.1",
+    "knplabs/knp-paginator-bundle": "^5.9",
+    "doctrine/mongodb-odm-bundle": "^4.5",
+    "ext-mongodb": "*"
   },
   "require-dev": {
     "friendsofphp/php-cs-fixer": "^2.16",
