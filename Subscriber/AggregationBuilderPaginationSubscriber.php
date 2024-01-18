@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Ludo\Bundle\AggregationBuilderPaginationBundle\Subscriber;
@@ -64,7 +65,8 @@ class AggregationBuilderPaginationSubscriber implements EventSubscriberInterface
         if ($hydrationClass) {
             $this->removeHydrationClass($ab);
         }
-        $results = $ab->execute()->toArray();
+
+        $results = $ab->getAggregation()->getIterator()->toArray();
 
         $event->count = $results[0]['count'][0]['count'] ?? 0;
         $event->items = $this->hydrateResults($results[0]['results'], $hydrationClass);
