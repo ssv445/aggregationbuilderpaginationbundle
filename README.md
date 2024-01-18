@@ -14,7 +14,7 @@ Bundle uses MongoDB [`$facet`][facet] operator which is available since MongoDB 
 Open a command console, enter your project directory and execute:
 
 ```console
-$ composer require ludo444/aggregation-builder-pagination-bundle
+$ composer require ssv445/aggregation-builder-pagination-bundle
 ```
 
 ## Installation without Symfony Flex
@@ -25,7 +25,7 @@ Open a command console, enter your project directory and execute the
 following command to download the latest stable version of this bundle:
 
 ```console
-$ composer require ludo444/aggregation-builder-pagination-bundle
+$ composer require ssv445/aggregation-builder-pagination-bundle
 ```
 
 ### Step 2: Enable the Bundle
@@ -94,7 +94,7 @@ class ExamplePagination
 }
 ```
 
-[pipeline]: https://gitlab.com/ludo444/aggregationbuilderpaginationbundle/badges/master/pipeline.svg
+[pipeline]: https://gitlab.com/ssv445/aggregationbuilderpaginationbundle/badges/master/pipeline.svg
 [KnpPaginatorBundle]: https://github.com/KnpLabs/KnpPaginatorBundle
 [DoctrineMongoDBBundle]: https://github.com/doctrine/DoctrineMongoDBBundle
 [facet]: https://docs.mongodb.com/manual/reference/operator/aggregation/facet/
